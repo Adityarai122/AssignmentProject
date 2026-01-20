@@ -27,7 +27,7 @@ app.use('/api/jobs', jobRoutes);
 app.use('/api/users', authRoutes);
 
 // Health check
-app.get('/', (req, res) => {
+app.get('/health', (req, res) => {
     res.json({ message: 'Welcome to Job Application Backend API v1' });
 });
 
