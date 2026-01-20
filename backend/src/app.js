@@ -27,9 +27,7 @@ app.use('/api/jobs', jobRoutes);
 app.use('/api/users', authRoutes);
 
 // Health check
-app.get('/health', (req, res) => {
-    res.json({ message: 'Welcome to Job Application Backend API v1' });
-});
+
 
 // Global Error Handler 
 app.use(errorHandler);
