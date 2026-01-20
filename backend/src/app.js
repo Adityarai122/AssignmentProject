@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import jobRoutes from './routes/Job.routes.js';
 import authRoutes from './routes/Auth.routes.js';
 import { errorHandler } from './middlewares/error.middleware.js';
+import { CORS_ORIGIN } from './config/env.config.js';
 
 
 const app = express();
@@ -15,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: CORS_ORIGIN,
     credentials: true
 }));
 app.use(helmet());
