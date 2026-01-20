@@ -1,0 +1,17 @@
+@import './tailwind.css';
+@import './variables.css';
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-md font-medium;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 text-gray-700;
+  }
+
+  .filter-active {
+    @apply bg-black text-white;
+  }
+}
+
